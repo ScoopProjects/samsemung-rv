@@ -1,0 +1,24 @@
+
+.changing-subtitle-container {
+  position: relative;
+  overflow: hidden;
+  height: 1.5em; /* Adjust based on your font size */
+  margin: 0.5rem 0;
+}
+
+.changing-subtitle {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.changing-subtitle.animate-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.changing-subtitle.animate-out {
+  transform: translateY(100%);
+  opacity: 0;
+}

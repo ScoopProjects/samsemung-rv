@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Code, Star } from 'lucide-react';
 import DocsLayout from '@/components/DocsLayout';
+import ChangingSubtitle from '@/components/ChangingSubtitle';
 
 const Index = () => {
   const featuresRef = useRef<HTMLDivElement>(null);
@@ -32,6 +33,13 @@ const Index = () => {
     };
   }, []);
 
+  const subtitles = [
+    "Samsung-specific emulation, no compromises.",
+    "Powerful device analysis for developers.",
+    "Explore Samsung's ecosystem in a sandbox.",
+    "From firmware to interface, full control."
+  ];
+
   return (
     <DocsLayout>
       <section className="mb-16">
@@ -39,9 +47,10 @@ const Index = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
             SamsEmung
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Samsung-specific emulation, no compromises.
-          </p>
+          <ChangingSubtitle 
+            subtitles={subtitles}
+            className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
+          />
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" onClick={scrollToFeatures}>
               Explore Features
